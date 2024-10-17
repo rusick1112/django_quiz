@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block title %} Quiz {% endblock %}
+{% block css %}
+<style>
+  body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        h1 {
+            font-size: 48px; 
+            font-weight: bold;
+            color: #333;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 24px; 
+            color: #555;
+            margin-bottom: 40px;
+        }
+        .block-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .block {
+            width: 200px;
+            padding: 10px;
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .block:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .material-symbols-outlined {
+            font-size: 100px;
+            color: #555;
+        }
+        .block h2 {
+            font-size: 24px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .block p {
+            font-size: 16px;
+            color: #666;
+        }
+        .head1 {
+            color: purple;
+            font-size: 2rem;
+            font-weight: bold;
+            height: 50px;
+        }
+
+        .head2 {
+            color: #123974;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+</style>
+{% endblock %}
+{% load static %}
+
+{% block body %}
+
+<h1>QuizCraft</h1>
+        <p>Выберите один из множества образовательных тестов представленных на сайте. Проверьте свои знания в школьной программе.</p>
+        <div class="block-container">
+            {% for i in quiz %}
+            <div class="block" onclick="location.href='{{ i.id }}/'">
+                <div class="material-symbols-outlined">{{ i.span }}</div>
+                <h2>{{ i.name }}</h2>
+                <p>{{ i.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+
+{% endblock %}
+{% block js %}
+<script>
+    startQuiz.addEventListener('click', () => {
+      window.location.href = url + id
+    });
+</script>
+{% endblock %}

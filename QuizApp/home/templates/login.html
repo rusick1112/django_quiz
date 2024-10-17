@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} Вход {% endblock %}
+
+  {% block body %}
+  <div class="row py-5 p-4 bg-white rounded shadow-sm justify-content-center">
+
+    <div class="col-md-6">
+        <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold"
+            style="color:black;font-weight:bold; text-align: center;">Вход</div>
+        <br>
+        <form class="row g-4" method="POST" action="/login/">{% csrf_token %}
+            <div class="col-md-12">
+                <input type="text" placeholder="Логин" style="text-align: center;"
+                    class="form-control" id="username" name="username" required>
+            </div>
+
+            <div class="col-md-12">
+                <input type="password" placeholder="Пароль" style="text-align: center;"
+                    class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Подтвердить</button>
+        </div>
+    </div>
+      
+  {% endblock %}

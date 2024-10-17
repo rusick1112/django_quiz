@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %} Регистрация {% endblock %}
+
+  {% block body %}
+  <div class="row py-5 p-4 bg-white rounded shadow-sm justify-content-center">
+
+    <div class="col-md-6">
+        <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold"
+            style="color:black;font-weight:bold; text-align: center;">Регистрация</div>
+        <br>
+        <form class="row g-4" method="POST" action="/signup/">{% csrf_token %}
+            <div class="col-md-12">
+                <input type="text" placeholder="Имя" style="text-align: center;"
+                    class="form-control" id="first_name" name="first_name" required>
+            </div>
+            <div class="col-md-12">
+                <input type="text" placeholder="Фамилия" style="text-align: center;"
+                    class="form-control" id="last_name" name="last_name" required>
+            </div>
+            <div class="col-md-12">
+                <input type="text" placeholder="Логин" style="text-align: center;"
+                    class="form-control" id="username" name="username" required>
+            </div>
+            <div class="col-md-12">
+                <input type="email" placeholder="Email" style="text-align: center;"
+                    class="form-control" id="email" name="email" required>
+            </div>
+            <div class="col-md-12">
+                <input type="password" placeholder="Пароль" style="text-align: center;"
+                    class="form-control" id="password1" name="password1" required>
+            </div>
+            <div class="col-md-12">
+                <input type="password" placeholder="Подтвердите пароль" style="text-align: center;"
+                    class="form-control" id="password2" name="password2" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Подтвердить</button>
+            </form>
+            <br>
+        </div>
+  </div>
+
+  {% endblock %}
