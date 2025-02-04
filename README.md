@@ -77,3 +77,6 @@ python manage.py runserver
 
 ---
 
+## Фото проекта
+
+![главная страница](https://github.com/rusick1112/django_quiz/blob/main/image.png?raw=true)
