@@ -43,6 +43,7 @@
 
 ```bash
 git clone https://github.com/rusick1112/django_quiz.git
+cd project
 ```
 
 ### 2️⃣ Настройка виртуального окружения
@@ -63,7 +64,6 @@ pip install -r requirements.txt
 ### 4️⃣ Миграция базы данных
 
 ```bash
-cd project
 python manage.py migrate
 ```
 
