@@ -43,7 +43,6 @@
 
 ```bash
 git clone https://github.com/rusick1112/django_quiz.git
-cd survey-web-app
 ```
 
 ### 2️⃣ Настройка виртуального окружения
