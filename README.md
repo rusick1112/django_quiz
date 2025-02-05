@@ -42,17 +42,17 @@
 ### 1️⃣ Клонирование репозитория
 
 ```bash
-git clone https://github.com/your-repo/survey-web-app.git
+git clone https://github.com/rusick1112/django_quiz.git
 cd survey-web-app
 ```
 
 ### 2️⃣ Настройка виртуального окружения
 
 ```bash
-python -m venv venv
+python -m venv .venv
 source venv/bin/activate  # Для Linux/macOS
 # или
-venv\Scripts\activate    # Для Windows
+.venv\Scripts\activate    # Для Windows
 ```
 
 ### 3️⃣ Установка зависимостей
@@ -64,6 +64,7 @@ pip install -r requirements.txt
 ### 4️⃣ Миграция базы данных
 
 ```bash
+cd project
 python manage.py migrate
 ```
 
